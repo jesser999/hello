@@ -1,0 +1,106 @@
+function isOdd(number) {
+    if (number % 2 ===0){
+        return false ;
+    }
+    return true ;
+}
+
+function isEven(number) {
+    if (number % 2 ===0){
+        return true ;
+    }
+    return false ;
+}
+        
+function returnTrue(){
+    return true
+}
+returnTrue()
+
+function returnFalse(){
+    return false
+}
+returnFalse()
+
+function isGreaterThen10(number){
+    if (number>10){
+        return true 
+    }
+    return false 
+}
+
+function isLessThan(num1, num2) {
+    if (num1<num2){
+        return true ;
+    }
+    return false ;
+}
+
+function isValidPassword(password) {
+    if (password.length>=8){
+    return true
+}
+    return false
+}
+
+
+function rectAreaGreaterThan50(length, width) {
+    if ((length * width )>=50){
+        return true ;
+    }
+    return false;
+}
+
+function greaterThen5(num1,num2){
+    if ((num1>5) || (num2>5)){
+        return true;
+    }
+    return false;
+}
+
+function allGreaterThan5(num1,num2){
+    if ((num1>5)&&(num2)){ 
+        return true ;
+    }
+    return false;
+}
+
+function largerThan5AndLessThan20(number) {
+    if (number>5 && number<20){
+        return true ;
+    }
+        return false;
+}
+
+function not6AndLessThan10(number) {
+    if ((number!==6) && (number<10)){
+          return true;
+      }
+      return false;
+  }
+
+
+  function largerThan3AndLessThan18(num1, num2, num3) {
+    if ((num1>3&&num1<18) && (num2>3 && num2<18) && (num3>3 && num3<18)){
+        return true ;
+    }
+    return false;
+}
+
+function areValidCredentials(name, password) {
+    if (name.length>3 && password.length>=8){
+        return true ;
+    }
+    return false ;
+}
+
+
+
+function findMinLengthOfThreeWords(string1, string2, string3) {
+    const length1 = string1.length;
+    const length2 = string2.length;
+    const length3 = string3.length;
+
+    // Find the smallest length using Math.min
+    return Math.min(length1, length2,length3)
+}
