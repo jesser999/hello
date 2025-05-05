@@ -62,3 +62,47 @@ function makeBook(Title,Author,MSRP,Genre,NumberOfPages,Description){
                            }
                         }return books
                       }
+
+
+                   function factoryMovies(title,director,duration,releaseDate,actor,role,rating){
+                        return {
+                            title : title ,
+                            director : director,
+                            duration : duration ,
+                            releaseDate : releaseDate ,
+                            actor : actor ,
+                            role : role ,
+                            rating : rating 
+                        }
+                    }
+                    var movie1 = factoryMovies("Inception","Christopher Nolan","2h 28m","2010-07-16",["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"] ,[" Dom Cobb"," Arthur"," Ariadne"] , 8.8)
+                    
+                    var movie2 = factoryMovies("The Shawshank Redemption","Frank Darabont","2h 22m", "1994-09-23",["Tim Robbins", "Morgan Freeman"],[" Andy Dufresne"," Ellis 'Red' Redding"] , 9.3)
+                    
+                    var movie3 = factoryMovies("Parasite","Bong Joon-ho","2h 12m","2019-05-30",["Kang-ho Song", "Sun-kyun Lee", "Yeo-jeong Jo"],[" Kim Ki-taek"," Chung-sook"," Cho Yeo-jeong"] , 8.6)
+
+
+
+
+                    function displayMovie(movie){
+                      return movie.title + ", by "+ movie.director + " released in "+ movie.releaseDate + ", and it's rating is " + movie.rating
+                      }
+
+
+                      function displayCast(movie){
+                        var res = ""
+                        for (var i = 0; i < movie.role.length; i++) {
+                            res = res + i + "." + movie.role[i] + " is acting by "+ movie.actor[i] + "\n"
+                        }return res 
+                      }
+                          var Inception = movie1
+                          var The_Shawshank_Redemption = movie2
+                          var Parasite = movie3
+                          var movies = [Inception , The_Shawshank_Redemption , Parasite]
+
+                    function displayMovies(movies){
+                         var res = ""
+                          for (var i = 0; i < movies.length; i++) {
+                           res = res + i +". " + displayMovie(movies[i]) + "\n"
+                           } return res
+                        }

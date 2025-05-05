@@ -307,3 +307,8 @@ function countAllCharacters(str) {
     
     return counts;  
   }  
+
+
+  function convertobjecttolist(object){
+    return (Object.entries(object))
+}
