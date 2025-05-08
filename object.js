@@ -299,16 +299,11 @@ function extand(object1,object2){
 
 function countAllCharacters(str) {  
     const counts = {};  
-    if (!str) return counts;   
+    if (!str) return counts; 
   
-    for (var char of str) {  
+    for (let char of str) {  
       counts[char] = (counts[char] || 0) + 1;  
     }  
     
     return counts;  
   }  
-
-
-  function convertobjecttolist(object){
-    return (Object.entries(object))
-}

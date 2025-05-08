@@ -1,0 +1,22 @@
+var todos = [];
+function generateid(){
+    var id = 0
+    return function(){
+     return   id = id +1
+    }
+}
+var newId = generateid()
+function todoFactory(task) {
+
+  return {
+      id: newId(),
+    task: task,
+    complete: function () {
+        if (task !== undefined) {
+            return true
+        }
+    },            
+      
+  };
+}
+
