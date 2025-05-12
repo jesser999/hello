@@ -18,7 +18,7 @@ var deposit = function(amount) {
           };
 
 
-            function MakeStopwatch() {
+            function MakeStopwatch(watchName) {
     var stopwatch = {}
      stopwatch.stop = null;
      stopwatch.time = 0;
@@ -62,4 +62,34 @@ var reset = function() {
                     return `Ejected: ${ejectedToast}`;
                 }
             }
+
+
     
+function MakeStopwatch(watchName) {
+    var stopwatch = {}
+     stopwatch.stop = null;
+     stopwatch.time = 0;
+    stopwatch.start = start;
+     stopwatch.pause = pause ;
+    stopwatch.reset = reset;
+    stopwatch.lap = lap
+     return stopwatch
+    }
+    var start = function() {
+    var that = this
+               this.stop = setInterval(function() {
+               that.time = that.time + 1;
+               console.log('Elapsed time: ' + that.time + 's.');
+          }, 1000);
+    }
+    var pause = function() {
+               clearInterval(this.stop);
+          };
+    var reset = function() {
+               clearInterval(this.stop);
+               this.time = 0;
+          }
+    var lap = function(watchName,lap){
+        this.time = this.time + lap
+        return 'Adding lap @ 2s to ' + watchName
+    }  

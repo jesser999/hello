@@ -48,7 +48,7 @@ function getStudentByInitials(name,char){
     var ok = []
     for (var i = 0; i < student.length; i++) {
         ok.push(student[i].toLowerCase())
-    }return ok
+    }
     char = char.toLowerCase()
     var res = []
     while (i < ok.length) {
