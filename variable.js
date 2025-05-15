@@ -64,7 +64,7 @@ function guessMyNumber(n) {
  } 
  function randInt(n) { 
  return Math.floor(Math.random() * (n + 1)) 
-
+ }
 var rand = randInt(7)
 var m = 0
 function guessMyNumber(n) { 
@@ -129,3 +129,4 @@ function guessMyNumber(n) {
  } 
  function randInt(n) { 
  return Math.floor(Math.random() * (n + 1)) 
+ }

@@ -255,3 +255,53 @@ function popLastElement(array) {
             result.push(item); 
     }   return result;  
 }  
+
+
+function reverseIterateAndLogRecursively(n) {
+    if(n===0){
+       console.log(n+' is even')
+       return
+    }
+    if(n%2===0){
+      console.log(n+' is even')
+    }
+    if(n%2!==0){
+      console.log(n+' is odd')
+    }
+     reverseIterateAndLogRecursively(n-1)
+
+}
+/*****************************  14  ***********************/
+function evenDigitsFor(str){
+  for(var i=0;i<str.length;i++){
+    if(parseInt(str[i])%2!==0){
+      return false
+    }    
+  }
+  return true
+}
+function evenDigitsRecursion(str){
+  if(str.length===0){
+    return true
+  }
+  if(parseInt(str[0])%2!==0){
+    return false
+  }
+ return evenDigitsRecursion(str.slice(1))
+}
+
+
+// ==> [[1,2],[1,2],2]===> [1,2,1,2,2]
+function flatten(array){
+  var acc=[]
+  for (var i = 0; i < array.length; i++) {
+    if(Array.isArray(array[i])){
+
+      acc=acc.concat(flatten(array[i]))
+    }else{
+      acc.push(array[i])
+    }
+  }
+  return acc
+
+}
